@@ -8,12 +8,30 @@ else:
 # This class defines a complete listener for a parse tree produced by SampLParser.
 class SampLListener(ParseTreeListener):
 
-    # Enter a parse tree produced by SampLParser#p.
-    def enterP(self, ctx:SampLParser.PContext):
+    # Enter a parse tree produced by SampLParser#startCompile.
+    def enterStartCompile(self, ctx:SampLParser.StartCompileContext):
         pass
 
-    # Exit a parse tree produced by SampLParser#p.
-    def exitP(self, ctx:SampLParser.PContext):
+    # Exit a parse tree produced by SampLParser#startCompile.
+    def exitStartCompile(self, ctx:SampLParser.StartCompileContext):
+        pass
+
+
+    # Enter a parse tree produced by SampLParser#newStatement.
+    def enterNewStatement(self, ctx:SampLParser.NewStatementContext):
+        pass
+
+    # Exit a parse tree produced by SampLParser#newStatement.
+    def exitNewStatement(self, ctx:SampLParser.NewStatementContext):
+        pass
+
+
+    # Enter a parse tree produced by SampLParser#printFunction.
+    def enterPrintFunction(self, ctx:SampLParser.PrintFunctionContext):
+        pass
+
+    # Exit a parse tree produced by SampLParser#printFunction.
+    def exitPrintFunction(self, ctx:SampLParser.PrintFunctionContext):
         pass
 
 

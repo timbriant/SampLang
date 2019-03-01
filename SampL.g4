@@ -1,15 +1,19 @@
 grammar SampL;
 
-p: 'output'  expression;
+startCompile: (newStatement '.')+;
+
+newStatement: (printFunction | variableDeclaration);
+
+printFunction: 'output'  expression;
 
 variableDeclaration: 'var' variableDeclarator (',' variableDeclarator)*;
-//fix erpression
+//fix expression
 variableDeclarator: variableDeclaratorId ('=' variableInitializer)?;
 variableDeclaratorId: Identifier ('[' ']')*;
 variableInitializer: expression;
 
 //expression can be int or string or double.
-expression: literal '.';
+expression: literal;
 
 literal: StringLiteral;
 
