@@ -9,9 +9,9 @@ import sys
 
 
 class HelloPrintListener(SampLListener):
-    def enterLiteral(self, ctx):
+    def enterPrint(self, ctx):
         #visit stringcharacters on stringliteral
-        print(ctx.StringLiteral())
+        print(ctx.expression())
 
 def main():
     lexer = SampLLexer(StdinStream())

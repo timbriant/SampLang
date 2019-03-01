@@ -17,6 +17,42 @@ class SampLListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by SampLParser#variableDeclaration.
+    def enterVariableDeclaration(self, ctx:SampLParser.VariableDeclarationContext):
+        pass
+
+    # Exit a parse tree produced by SampLParser#variableDeclaration.
+    def exitVariableDeclaration(self, ctx:SampLParser.VariableDeclarationContext):
+        pass
+
+
+    # Enter a parse tree produced by SampLParser#variableDeclarator.
+    def enterVariableDeclarator(self, ctx:SampLParser.VariableDeclaratorContext):
+        pass
+
+    # Exit a parse tree produced by SampLParser#variableDeclarator.
+    def exitVariableDeclarator(self, ctx:SampLParser.VariableDeclaratorContext):
+        pass
+
+
+    # Enter a parse tree produced by SampLParser#variableDeclaratorId.
+    def enterVariableDeclaratorId(self, ctx:SampLParser.VariableDeclaratorIdContext):
+        pass
+
+    # Exit a parse tree produced by SampLParser#variableDeclaratorId.
+    def exitVariableDeclaratorId(self, ctx:SampLParser.VariableDeclaratorIdContext):
+        pass
+
+
+    # Enter a parse tree produced by SampLParser#variableInitializer.
+    def enterVariableInitializer(self, ctx:SampLParser.VariableInitializerContext):
+        pass
+
+    # Exit a parse tree produced by SampLParser#variableInitializer.
+    def exitVariableInitializer(self, ctx:SampLParser.VariableInitializerContext):
+        pass
+
+
     # Enter a parse tree produced by SampLParser#expression.
     def enterExpression(self, ctx:SampLParser.ExpressionContext):
         pass
