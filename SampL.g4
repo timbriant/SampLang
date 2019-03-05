@@ -15,10 +15,14 @@ variableInitializer: expression;
 //expression can be int or string or double.
 expression: literal;
 
-literal: StringLiteral;
+literal: StringLiteral | IntegerLiteral;
 
+
+//literals
 StringLiteral: '"' StringCharacters? '"' | '\'' StringCharacters? '\'';
-
+IntegerLiteral: Digit Digit*;
+fragment Digit: '0' | NonZeroDigit;
+fragment NonZeroDigit: [1-9];
 
 Identifier: [a-zA-Z$_] ([a-zA-Z0-9$_])*;
 fragment StringCharacters: StringCharacter+;

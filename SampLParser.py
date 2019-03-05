@@ -8,26 +8,26 @@ import sys
 
 def serializedATN():
     with StringIO() as buf:
-        buf.write("\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\f")
+        buf.write("\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\r")
         buf.write("?\4\2\t\2\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b")
         buf.write("\t\b\4\t\t\t\4\n\t\n\3\2\3\2\3\2\6\2\30\n\2\r\2\16\2\31")
         buf.write("\3\3\3\3\5\3\36\n\3\3\4\3\4\3\4\3\5\3\5\3\5\3\5\7\5\'")
         buf.write("\n\5\f\5\16\5*\13\5\3\6\3\6\3\6\5\6/\n\6\3\7\3\7\3\7\7")
         buf.write("\7\64\n\7\f\7\16\7\67\13\7\3\b\3\b\3\t\3\t\3\n\3\n\3\n")
-        buf.write("\2\2\13\2\4\6\b\n\f\16\20\22\2\2\2:\2\27\3\2\2\2\4\35")
-        buf.write("\3\2\2\2\6\37\3\2\2\2\b\"\3\2\2\2\n+\3\2\2\2\f\60\3\2")
-        buf.write("\2\2\168\3\2\2\2\20:\3\2\2\2\22<\3\2\2\2\24\25\5\4\3\2")
-        buf.write("\25\26\7\3\2\2\26\30\3\2\2\2\27\24\3\2\2\2\30\31\3\2\2")
-        buf.write("\2\31\27\3\2\2\2\31\32\3\2\2\2\32\3\3\2\2\2\33\36\5\6")
-        buf.write("\4\2\34\36\5\b\5\2\35\33\3\2\2\2\35\34\3\2\2\2\36\5\3")
-        buf.write("\2\2\2\37 \7\4\2\2 !\5\20\t\2!\7\3\2\2\2\"#\7\5\2\2#(")
-        buf.write("\5\n\6\2$%\7\6\2\2%\'\5\n\6\2&$\3\2\2\2\'*\3\2\2\2(&\3")
-        buf.write("\2\2\2()\3\2\2\2)\t\3\2\2\2*(\3\2\2\2+.\5\f\7\2,-\7\7")
-        buf.write("\2\2-/\5\16\b\2.,\3\2\2\2./\3\2\2\2/\13\3\2\2\2\60\65")
-        buf.write("\7\13\2\2\61\62\7\b\2\2\62\64\7\t\2\2\63\61\3\2\2\2\64")
-        buf.write("\67\3\2\2\2\65\63\3\2\2\2\65\66\3\2\2\2\66\r\3\2\2\2\67")
-        buf.write("\65\3\2\2\289\5\20\t\29\17\3\2\2\2:;\5\22\n\2;\21\3\2")
-        buf.write("\2\2<=\7\n\2\2=\23\3\2\2\2\7\31\35(.\65")
+        buf.write("\2\2\13\2\4\6\b\n\f\16\20\22\2\3\3\2\n\13\2:\2\27\3\2")
+        buf.write("\2\2\4\35\3\2\2\2\6\37\3\2\2\2\b\"\3\2\2\2\n+\3\2\2\2")
+        buf.write("\f\60\3\2\2\2\168\3\2\2\2\20:\3\2\2\2\22<\3\2\2\2\24\25")
+        buf.write("\5\4\3\2\25\26\7\3\2\2\26\30\3\2\2\2\27\24\3\2\2\2\30")
+        buf.write("\31\3\2\2\2\31\27\3\2\2\2\31\32\3\2\2\2\32\3\3\2\2\2\33")
+        buf.write("\36\5\6\4\2\34\36\5\b\5\2\35\33\3\2\2\2\35\34\3\2\2\2")
+        buf.write("\36\5\3\2\2\2\37 \7\4\2\2 !\5\20\t\2!\7\3\2\2\2\"#\7\5")
+        buf.write("\2\2#(\5\n\6\2$%\7\6\2\2%\'\5\n\6\2&$\3\2\2\2\'*\3\2\2")
+        buf.write("\2(&\3\2\2\2()\3\2\2\2)\t\3\2\2\2*(\3\2\2\2+.\5\f\7\2")
+        buf.write(",-\7\7\2\2-/\5\16\b\2.,\3\2\2\2./\3\2\2\2/\13\3\2\2\2")
+        buf.write("\60\65\7\f\2\2\61\62\7\b\2\2\62\64\7\t\2\2\63\61\3\2\2")
+        buf.write("\2\64\67\3\2\2\2\65\63\3\2\2\2\65\66\3\2\2\2\66\r\3\2")
+        buf.write("\2\2\67\65\3\2\2\289\5\20\t\29\17\3\2\2\2:;\5\22\n\2;")
+        buf.write("\21\3\2\2\2<=\t\2\2\2=\23\3\2\2\2\7\31\35(.\65")
         return buf.getvalue()
 
 
@@ -46,7 +46,7 @@ class SampLParser ( Parser ):
 
     symbolicNames = [ "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
                       "<INVALID>", "<INVALID>", "<INVALID>", "<INVALID>", 
-                      "StringLiteral", "Identifier", "WS" ]
+                      "StringLiteral", "IntegerLiteral", "Identifier", "WS" ]
 
     RULE_startCompile = 0
     RULE_newStatement = 1
@@ -71,8 +71,9 @@ class SampLParser ( Parser ):
     T__5=6
     T__6=7
     StringLiteral=8
-    Identifier=9
-    WS=10
+    IntegerLiteral=9
+    Identifier=10
+    WS=11
 
     def __init__(self, input:TokenStream, output:TextIO = sys.stdout):
         super().__init__(input, output)
@@ -106,12 +107,6 @@ class SampLParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitStartCompile" ):
                 listener.exitStartCompile(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitStartCompile" ):
-                return visitor.visitStartCompile(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -171,12 +166,6 @@ class SampLParser ( Parser ):
             if hasattr( listener, "exitNewStatement" ):
                 listener.exitNewStatement(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitNewStatement" ):
-                return visitor.visitNewStatement(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -230,12 +219,6 @@ class SampLParser ( Parser ):
             if hasattr( listener, "exitPrintFunction" ):
                 listener.exitPrintFunction(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitPrintFunction" ):
-                return visitor.visitPrintFunction(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -281,12 +264,6 @@ class SampLParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitVariableDeclaration" ):
                 listener.exitVariableDeclaration(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitVariableDeclaration" ):
-                return visitor.visitVariableDeclaration(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -348,12 +325,6 @@ class SampLParser ( Parser ):
             if hasattr( listener, "exitVariableDeclarator" ):
                 listener.exitVariableDeclarator(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitVariableDeclarator" ):
-                return visitor.visitVariableDeclarator(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -404,12 +375,6 @@ class SampLParser ( Parser ):
         def exitRule(self, listener:ParseTreeListener):
             if hasattr( listener, "exitVariableDeclaratorId" ):
                 listener.exitVariableDeclaratorId(self)
-
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitVariableDeclaratorId" ):
-                return visitor.visitVariableDeclaratorId(self)
-            else:
-                return visitor.visitChildren(self)
 
 
 
@@ -465,12 +430,6 @@ class SampLParser ( Parser ):
             if hasattr( listener, "exitVariableInitializer" ):
                 listener.exitVariableInitializer(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitVariableInitializer" ):
-                return visitor.visitVariableInitializer(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -512,12 +471,6 @@ class SampLParser ( Parser ):
             if hasattr( listener, "exitExpression" ):
                 listener.exitExpression(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitExpression" ):
-                return visitor.visitExpression(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -547,6 +500,9 @@ class SampLParser ( Parser ):
         def StringLiteral(self):
             return self.getToken(SampLParser.StringLiteral, 0)
 
+        def IntegerLiteral(self):
+            return self.getToken(SampLParser.IntegerLiteral, 0)
+
         def getRuleIndex(self):
             return SampLParser.RULE_literal
 
@@ -558,12 +514,6 @@ class SampLParser ( Parser ):
             if hasattr( listener, "exitLiteral" ):
                 listener.exitLiteral(self)
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitLiteral" ):
-                return visitor.visitLiteral(self)
-            else:
-                return visitor.visitChildren(self)
-
 
 
 
@@ -571,10 +521,16 @@ class SampLParser ( Parser ):
 
         localctx = SampLParser.LiteralContext(self, self._ctx, self.state)
         self.enterRule(localctx, 16, self.RULE_literal)
+        self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 58
-            self.match(SampLParser.StringLiteral)
+            _la = self._input.LA(1)
+            if not(_la==SampLParser.StringLiteral or _la==SampLParser.IntegerLiteral):
+                self._errHandler.recoverInline(self)
+            else:
+                self._errHandler.reportMatch(self)
+                self.consume()
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
